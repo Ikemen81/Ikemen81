@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a0a0a0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- 背景の円（ダークテーマに映える黒ベース） -->
+  <circle cx="50" cy="50" r="48" fill="#1a1a1a" stroke="url(#grad)" stroke-width="4"/>
+  <!-- "I" の文字をスタイリッシュに配置 -->
+  <text x="50" y="65" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="url(#grad)" text-anchor="middle">I</text>
+  <!-- アクセントの小さなドット -->
+  <circle cx="70" cy="30" r="6" fill="#ffffff" />
+</svg>

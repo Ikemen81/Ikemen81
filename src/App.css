@@ -1,0 +1,215 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.hero {
+  padding: 2rem 0 4rem;
+  text-align: center;
+}
+
+.hero-text {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
+/* 登場アニメーション用のラッパー */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.link-card-wrapper {
+  opacity: 0;
+  animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.link-card-wrapper:nth-child(1) { animation-delay: 0.2s; }
+.link-card-wrapper:nth-child(2) { animation-delay: 0.4s; }
+.link-card-wrapper:nth-child(3) { animation-delay: 0.6s; }
+.link-card-wrapper:nth-child(4) { animation-delay: 0.8s; }
+
+/* カード本体のスタイルとホバーエフェクト */
+.link-card {
+  background: rgba(100, 0, 20, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2.5rem;
+  border-radius: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  transition: 
+    transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), 
+    box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1), 
+    background 0.8s cubic-bezier(0.23, 1, 0.32, 1), 
+    border-color 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  border: var(--glass-border);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    inset 0 0 30px rgba(212, 175, 55, 0.1),
+    0 15px 35px rgba(0, 0, 0, 0.6);
+  display: block;
+  transform: translateY(0) scale(1);
+}
+
+.link-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.link-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.4) 45%,
+    rgba(212, 175, 55, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 55%,
+    rgba(255, 255, 255, 0) 70%,
+    transparent 100%
+  );
+  transform: rotate(45deg);
+  transition: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.link-card:hover::after {
+  left: 150%;
+  opacity: 1;
+  transition: left 0.8s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.1s;
+}
+
+.link-card:hover {
+  transform: translateY(-12px) scale(1.015);
+  border-color: #fff9c4;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(128, 0, 32, 0.5), 0 0 30px rgba(212, 175, 55, 0.3);
+  background: rgba(140, 0, 35, 0.85);
+}
+
+/* SVGアイコンのスタイル */
+.card-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-accent);
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+  transition: var(--transition);
+}
+
+.card-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.2;
+}
+
+.link-card:hover .card-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.8));
+  color: #fff9c4;
+}
+
+.card-content {
+  text-align: left;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+  font-family: var(--font-serif);
+}
+
+.card-desc {
+  margin: 0.8rem 0 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 5rem 0 3rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .link-card {
+    padding: 1.5rem;
+  }
+  
+  .link-card-inner {
+    gap: 1.5rem;
+  }
+  
+  .card-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

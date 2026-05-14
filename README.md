@@ -1,16 +1,28 @@
-## Hi there 👋
+# Ikemen81 Portal
 
-<!--
-**Ikemen81/Ikemen81** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+イケメン(81歳)が送る、ミニマル・ダークなポータルサイトプロジェクトです。
+React 19 と Vite を使って構築されています。
 
-Here are some ideas to get you started:
+## 🚀 使い方（起動方法）
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+開発サーバーを立ち上げるには、ターミナルで以下のコマンドを実行してください。
+
+```bash
+npm run dev
+```
+
+起動したら、ターミナルに表示されたURL（例: `http://localhost:5173`）をブラウザで開くと、サイトを確認できます。
+
+## 🛠 コマンド一覧
+
+- `npm run dev`: 開発用サーバーを起動します（外部アクセスも可能です）。
+- `npm run build`: サイトを公開するための準備（ビルド）をします。
+- `npm run preview`: ビルドした内容をローカルで確認します。
+- `npm run lint`: コードにエラーがないかチェックします。
+
+## 📂 プロジェクトの主要なファイル
+
+- `src/App.tsx`: サイトのメインコンテンツが書いてあるファイルです。
+- `src/components/`: ヘッダーやカードなど、画面の部品が入っています。
+- `src/App.css`: サイトのデザイン（色やレイアウト）を決めているファイルです。
+- `src/index.css`: 全体共通の基本的なスタイルが書いてあります。
