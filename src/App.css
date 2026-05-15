@@ -25,7 +25,8 @@
   -webkit-text-fill-color: transparent;
   margin: 0;
   filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
-  padding: 0 0.5rem; /* 斜体と影の「逃げ」を作る */
+  padding-right: 0.5em; /* 斜体の「はみ出し」を収めるためのバッファ */
+  display: block;
 }
 
 /* nowrapは不要になったため削除を検討しても良いですが、一旦残しておきます */
