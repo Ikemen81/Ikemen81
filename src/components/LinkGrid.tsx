@@ -1,9 +1,12 @@
+import type { JSX } from 'react';
 import { LinkCard } from './LinkCard';
 
 interface Link {
   title: string;
   desc: string;
-  emoji: string;
+  //emoji: string;
+  //icon: string;
+  icon: JSX.Element;
   url: string;
 }
 
