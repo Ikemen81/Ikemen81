@@ -51,7 +51,7 @@ function App() {
           />
         ))}
       </div>
-      <Header title="イケメン(81歳) 超イケメン伝説物語" />
+      <Header title={<><span className="nowrap">イケメン(81歳)</span> <span className="nowrap">超イケメン伝説物語</span></>} />
 
       <main>
         <Hero text="こんばんは，イケメン(81歳)です" />
