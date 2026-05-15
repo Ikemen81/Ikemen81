@@ -145,7 +145,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /* アイコンが潰れないように固定 */
   color: var(--gold-accent);
   filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
   transition: var(--transition);
@@ -194,33 +193,32 @@
 
 @media (max-width: 600px) {
   .container {
-    padding: 2.5rem 1.2rem;
+    padding: 2rem 1.2rem;
   }
   
   .title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.2;
   }
 
   .hero-text {
     font-size: 1.1rem;
     padding: 0 0.5rem;
-    line-height: 1.6;
   }
 
   .link-card {
-    padding: 2.5rem 1.8rem;
+    padding: 2rem 1.5rem;
   }
   
   .link-card-inner {
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
   
   .card-icon {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 3rem;
+    height: 3rem;
     margin: 0 auto;
   }
 
@@ -229,12 +227,11 @@
   }
 
   .card-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .card-desc {
-    font-size: 1rem;
-    margin-top: 0.8rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-top: 0.6rem;
   }
 }
